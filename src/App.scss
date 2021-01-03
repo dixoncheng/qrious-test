@@ -1,0 +1,61 @@
+.App {
+  text-align: center;
+  padding: 50px 10px;
+}
+.family-tree {
+  display: inline-flex;
+  > .branch {
+    &:before,
+    &:after {
+      display: none;
+    }
+  }
+}
+.children {
+  display: inline-flex;
+  justify-content: center;
+  padding-top: 50px;
+  position: relative;
+  overflow: hidden;
+  &:before {
+    content: '';
+    position: absolute;
+    top: 0px;
+    left: 50%;
+    width: 1px;
+    height: 25px;
+    background: black;
+  }
+}
+
+.branch {
+  // margin: 0 5px;
+  position: relative;
+  &:first-child:before {
+    content: '';
+    position: absolute;
+    top: -25px;
+    left: 50%;
+    width: 200vw;
+    height: 1px;
+    background: black;
+  }
+  &:after {
+    content: '';
+    position: absolute;
+    top: -25px;
+    left: 50%;
+    width: 1px;
+    height: 25px;
+    background: black;
+  }
+  &:last-child:before {
+    content: '';
+    position: absolute;
+    top: -25px;
+    left: calc(50% + 1px);
+    width: 200vw;
+    height: 25px;
+    background: white;
+  }
+}

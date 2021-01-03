@@ -1,0 +1,18 @@
+.person {
+  box-sizing: border-box;
+  text-align: left;
+  width: 220px;
+  padding: 15px;
+  margin: 0 auto;
+  border: solid white;
+  border-width: 0 5px;
+  + .person {
+    margin-top: 10px;
+  }
+}
+.person--male {
+  background-color: lightblue;
+}
+.person--female {
+  background-color: lightpink;
+}
